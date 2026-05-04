@@ -1,5 +1,5 @@
 name: "Ism7MQTT (pinned image)"
-description: "ism7mqtt con immagine Docker fissata (build.yaml) — evita master mobile senza fork del core"
+description: "ism7mqtt with a pinned zivillian/ism7mqtt image tag (build.yaml); avoids moving master"
 version: "1.0.0"
 slug: "ism7mqtt-pinned"
 init: false
