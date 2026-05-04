@@ -1,0 +1,7 @@
+# Pin dell'immagine zivillian/ism7mqtt. Dopo modifica: Rebuild add-on in Supervisor.
+# Valori tipici: v0.0.19 | master
+build_from:
+  aarch64: ghcr.io/home-assistant/aarch64-base:latest
+  amd64: ghcr.io/home-assistant/amd64-base:latest
+args:
+  ISM7MQTT_TAG: "v0.0.19"

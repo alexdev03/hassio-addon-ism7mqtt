@@ -1,5 +1,13 @@
 # Ism7MQTT Addon Repository
 
+Fork: **https://github.com/alexdev03/hassio-addon-ism7mqtt** — upstream: [b3nn0/hassio-addon-ism7mqtt](https://github.com/b3nn0/hassio-addon-ism7mqtt).
+
+## Third add-on: `ism7mqtt-pinned`
+
+**Ism7MQTT (pinned image)** uses a fixed Docker tag for `zivillian/ism7mqtt` (`build.yaml` → `ISM7MQTT_TAG`, default `v0.0.19`) instead of the moving `master` image. Use this if the official experimental add-on leaves some sensors stuck on stale values ([zivillian/ism7mqtt#205](https://github.com/zivillian/ism7mqtt/issues/205)). After changing the tag: **Rebuild** the add-on in Supervisor. Do not run two add-ons against the same ISM7.
+
+---
+
 This Repository contains a Home Assistant Addon to run Ism7MQTT for reading data from Wolf heaters, equipped with an ISM7 Module, directly.
 
 Also supports running multiple instances of ism7mqtt. To do so, configure the first instance normally, then, for each additional ISM7 you have, specify a block like this under "additional ISM7 devices":
@@ -19,7 +27,7 @@ For more information, or if you encounter any issues, please refer to https://gi
 # Beginner guide
 1. Go to Settings -> Add Ons and install "Mosquitto broker" and Start it
 2. Go to Settings -> Integrations and install "MQTT" It will ask you if it should use the local "Mosquitto broker" Add-On - click Yes
-3. Go to Settings -> Add Ons "Add On Store" (bottom right) -> Repository (Top Right) -> Add "https://github.com/b3nn0/hassio-addon-ism7mqtt" Repository
+3. Go to Settings -> Add Ons "Add On Store" (bottom right) -> Repository (Top Right) -> Add **this** repository: `https://github.com/alexdev03/hassio-addon-ism7mqtt` (or upstream `https://github.com/b3nn0/hassio-addon-ism7mqtt`)
 4. Add the "Ism7MQTT" Add-On and Configure it for your WOLFLINK (Name, IP, Password (the one on the sticker)) -> Open the Add-On -> TAB "Configure"
 5. start the Add-On "Ism7MQTT", it will configure all Entities for your WOLF. If something goes wrong, check the log/protocol tab of the Add-on.
 

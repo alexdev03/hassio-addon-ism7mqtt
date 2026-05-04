@@ -1,0 +1,2 @@
+# HA add-on shell entrypoints must stay LF inside the image
+**/run.sh text eol=lf
