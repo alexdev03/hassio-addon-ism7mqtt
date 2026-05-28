@@ -1,7 +1,10 @@
-# Pin dell'immagine zivillian/ism7mqtt. Dopo modifica: Rebuild add-on in Supervisor.
-# Valori tipici: v0.0.19 | master
+# Pin dell'immagine zivillian/ism7mqtt + merge PR upstream. Dopo modifica: Rebuild add-on in Supervisor.
+# ISM7MQTT_TAG: base tag per l'immagine Docker (master | v0.0.19)
+# ISM7MQTT_MERGE_PR: numero PR da mergiare nel sorgente prima del build (211 = race condition fix)
 build_from:
   aarch64: ghcr.io/home-assistant/aarch64-base:latest
   amd64: ghcr.io/home-assistant/amd64-base:latest
 args:
-  ISM7MQTT_TAG: "v0.0.19"
+  ISM7MQTT_TAG: "master"
+  ISM7MQTT_MERGE_PR: "211"
+  ISM7MQTT_CLONE_DEPTH: "50"

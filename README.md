@@ -12,7 +12,7 @@ After `git pull`: **Supervisor → add-on → Rebuild** (5–15 min, needs inter
 
 ## What this add-on does
 
-**Ism7MQTT (pinned image)** uses a fixed Docker tag for `zivillian/ism7mqtt` (`build.yaml` → `ISM7MQTT_TAG`, default `v0.0.19`) instead of the moving `master` image. Use it if the official experimental add-on leaves some sensors stuck ([zivillian/ism7mqtt#205](https://github.com/zivillian/ism7mqtt/issues/205)). After changing the tag in `ism7mqtt-pinned/build.yaml`, **Rebuild** the add-on in Supervisor.
+**Ism7MQTT (pinned image)** builds `zivillian/ism7mqtt` from a configurable base tag (`build.yaml` → `ISM7MQTT_TAG`, default `master`) and **merges upstream PR #211** at build time (`ISM7MQTT_MERGE_PR`) for the race-condition / bundle-ID fix ([zivillian/ism7mqtt#211](https://github.com/zivillian/ism7mqtt/pull/211), [issue #205](https://github.com/zivillian/ism7mqtt/issues/205)). A **sidfix** patch for WolfLink 300.x login XML is applied on top. After changing `ism7mqtt-pinned/build.yaml`, **Rebuild** the add-on in Supervisor (5–15 min, needs internet).
 
 Do not run two add-ons against the same ISM7 (only one TCP session).
 

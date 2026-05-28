@@ -1,6 +1,6 @@
 name: "Ism7MQTT (pinned image)"
-description: "ism7mqtt with a pinned zivillian/ism7mqtt image tag (build.yaml); avoids moving master"
-version: "1.0.0"
+description: "ism7mqtt built from a pinned upstream tag + merged PR #211 (race fix) and WolfLink sidfix"
+version: "1.1.0"
 slug: "ism7mqtt-pinned"
 init: false
 url: https://github.com/alexdev03/hassio-addon-ism7mqtt
