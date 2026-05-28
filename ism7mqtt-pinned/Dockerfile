@@ -14,6 +14,8 @@ RUN git clone --depth "${ISM7MQTT_CLONE_DEPTH}" --branch "${ISM7MQTT_TAG}" \
         https://github.com/zivillian/ism7mqtt.git /src \
     && cd /src \
     && git fetch origin "pull/${ISM7MQTT_MERGE_PR}/head:pr-merge" \
+    && git config user.email "docker@build" \
+    && git config user.name "Docker Build" \
     && git merge --no-edit pr-merge
 COPY sidfix/patch_ism7.py /tmp/patch_ism7.py
 RUN python3 /tmp/patch_ism7.py \
